@@ -71,10 +71,20 @@ main {
     box-sizing: border-box;
 }
 
-main > div:not(.hero-image) {
+main > div:not(.hero-image):not(.no-margin) {
     max-width: 1080px;
 
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-padding {
+    margin-top: 40px;
+}
+
+.container-padding > div {
+    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -165,4 +175,29 @@ main > div:not(.hero-image) {
 .card-body {
     font-family: "Poppins";
     font-weight: 300;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+
+    padding: 80px 0 80px 0;
+}
+
+.call-to-action > h2 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.call-to-action > p {
+    margin-bottom: 30px;
+    max-width: 600px;
 }
