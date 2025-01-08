@@ -13,7 +13,7 @@ body {
     /* font-family: "Poppins"; */
     /* font-family: circular-light; */
 
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     background-color: #F9FCFF;
 }
@@ -64,11 +64,19 @@ nav > ul > li > a:hover {
 }
 
 main {
-    max-width: 1080px;
+    /* max-width: 1080px; */
     min-height: 100vh;
     margin: auto;
 
     box-sizing: border-box;
+}
+
+main > div:not(.hero-image) {
+    max-width: 1080px;
+
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button {
@@ -101,6 +109,7 @@ main {
     display: flex;
     flex-direction: column;
 
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -114,11 +123,37 @@ main {
     max-width: 400px;
     font-size: 1.5rem;
     margin-bottom: 3rem;
+}
 
-    text-align: center;
+.hero-image-buttons > .button:not(.hero-image-buttons > .button:last-child) {
+    margin-right: 15px
 }
 
 .hero-image-buttons > .button:last-child {
     background-color: rgb(14, 14, 14);
     color: white;
+}
+
+.card-graphics {
+    padding: 10px;
+
+    display: flex;
+}
+
+.card {
+    padding: 10px;
+}
+
+.card-image {
+    height: 100px;
+}
+
+.card-title {
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+.card-body {
+    font-family: "Poppins";
+    font-weight: 300;
 }
