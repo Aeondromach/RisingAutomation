@@ -94,7 +94,7 @@ main {
     box-sizing: border-box;
 }
 
-main > div:not(.hero-image):not(.no-margin) {
+main > div:not(.hero-banner):not(.no-margin) {
     max-width: 1080px;
 
     margin-top: 40px;
@@ -125,20 +125,32 @@ main > div:not(.hero-image):not(.no-margin) {
     padding: 16px 24px 16px 24px;
 }
 
-.hero-image {
+.hero-banner {
     width: 100%;
 
-    background-image: var(--image);
-    background-size: cover;
-    background-position: 0 30%;
+    position: relative;
+    overflow: hidden;
 
     max-height: 90vh;
     height: 500px;
 }
 
-.hero-image-text {
+.hero-image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
+    filter: blur(2px) brightness(90%);
+}
+
+.hero-image-text {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    line-height: 3rem;
 
     color: white;
     font-family: "Montserrat";
@@ -154,7 +166,7 @@ main > div:not(.hero-image):not(.no-margin) {
 
 .hero-image-text > h2 {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-image-text > p {
