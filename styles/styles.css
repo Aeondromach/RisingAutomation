@@ -37,12 +37,12 @@ header {
 }
 
 footer {
-    margin-top: 40px;
-    padding: 60px 0 80px 0;
+    padding: 80px 0 80px 0;
 
     font-size: 0.9rem;
     line-height: 1.7rem;
 
+    background-color: white;
     
     /* background-color: white; */
 }
@@ -223,13 +223,13 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .card-graphics {
-    padding: 10px;
+    padding: 40px 10px 40px 10px;
 
     display: flex;
 }
 
 .card {
-    padding: 10px;
+    padding: 15px;
 }
 
 .card-image {
