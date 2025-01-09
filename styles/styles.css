@@ -188,8 +188,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     line-height: 3rem;
 
     color: white;
-    font-family: "Montserrat";
-    font-weight: bold;
+    font-family: circular;
 
     display: flex;
     flex-direction: column;
@@ -201,12 +200,15 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .hero-image-text > h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
+    font-weight: bold;
 }
 
 .hero-image-text > p {
-    max-width: 400px;
+    font-family: circular-light;
     font-size: 1.5rem;
+
+    max-width: 400px;
     margin-bottom: 2.5rem;
 }
 
