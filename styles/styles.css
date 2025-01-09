@@ -16,6 +16,8 @@ body {
     --primary-background: #F9FCFF;
     --primary-text: #31486b;
 
+    --primary-background-dark: hsl(216, 100%, 99%);
+
     font-size: 1rem;
     line-height: 2rem;
     background-color: var(--primary-background);
@@ -37,15 +39,14 @@ header {
 }
 
 footer {
-    padding: 80px 0 80px 0;
+    padding: 80px 20px 80px 20px;
 
     font-size: 0.9rem;
     line-height: 1.7rem;
 
     background-color: white;
     
-    box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);
-    /* border-top: 1px solid rgb(200, 200, 200); */
+    box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);    /* border-top: 1px solid rgb(200, 200, 200); */
     /* background-color: white; */
 }
 
@@ -86,10 +87,22 @@ footer a:hover {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
+    max-width: 275px;
+}
+
+.footer-table > li {
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
 }
 
 .logo {
-    max-height: 70px;
+    max-height: 40px;
+    filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
 }
 
 nav {
@@ -160,6 +173,10 @@ main > div:not(.hero-banner):not(.no-margin) {
     padding: 16px 24px 16px 24px;
 }
 
+.button:hover {
+    background-color: var(--primary-background-dark);
+}
+
 .hero-banner {
     width: 100%;
 
@@ -173,7 +190,9 @@ main > div:not(.hero-banner):not(.no-margin) {
 .hero-image {
     width: 100%;
     height: 100%;
+    scale: 1;
     object-fit: cover;
+    object-position: 0 40%;
 
     filter: blur(2px) brightness(90%);
 }
@@ -185,7 +204,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     width: 100%;
     height: 100%;
 
-    line-height: 3rem;
+    line-height: 2.75rem;
 
     color: white;
     font-family: circular;
@@ -200,7 +219,6 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .hero-image-text > h2 {
     font-size: 2.5rem;
-    /* margin-bottom: 0.5rem; */
     font-weight: bold;
 }
 
@@ -209,7 +227,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     font-size: 1.5rem;
 
     max-width: 400px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .hero-image-buttons {
@@ -286,5 +304,5 @@ main > div:not(.hero-banner):not(.no-margin) {
 .sources-main {
     max-width: 1000px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
