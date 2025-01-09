@@ -16,6 +16,7 @@ body {
     font-size: 1.1rem;
     line-height: 2rem;
     background-color: #F9FCFF;
+    color: rgb(49, 72, 107);
 }
 
 header {
@@ -34,25 +35,52 @@ header {
 
 footer {
     margin-top: 40px;
-    padding: 40px 0 40px 0;
+    padding: 60px 0 80px 0;
 
     font-size: 1rem;
+    line-height: 1.7rem;
 
+    
     /* background-color: white; */
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .footer-content {
     display: flex;
     flex-direction: row;
 
-    gap: 20px;
+    gap: 40px;
 
     max-width: 1080px;
     margin: auto;
 }
 
+.footer-content > div {
+    width: 100%;
+}
+
 .footer-content > div > h2 {
     font-weight: bold;
+    margin-bottom: 1.1rem;
+}
+
+.footer-content > div > *:not(h2) {
+    color: rgb(114, 117, 120);
+}
+
+.footer-table {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .logo {
@@ -78,7 +106,7 @@ nav > ul {
 }
 
 nav > ul > li > a {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
