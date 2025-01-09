@@ -89,7 +89,8 @@ footer a:hover {
 }
 
 .logo {
-    max-height: 70px;
+    max-height: 40px;
+    filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
 nav {
@@ -173,7 +174,9 @@ main > div:not(.hero-banner):not(.no-margin) {
 .hero-image {
     width: 100%;
     height: 100%;
+    scale: 1;
     object-fit: cover;
+    object-position: 0 40%;
 
     filter: blur(2px) brightness(90%);
 }
@@ -185,7 +188,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     width: 100%;
     height: 100%;
 
-    line-height: 3rem;
+    line-height: 2.75rem;
 
     color: white;
     font-family: circular;
@@ -200,7 +203,6 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .hero-image-text > h2 {
     font-size: 2.5rem;
-    /* margin-bottom: 0.5rem; */
     font-weight: bold;
 }
 
