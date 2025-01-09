@@ -37,15 +37,14 @@ header {
 }
 
 footer {
-    padding: 80px 0 80px 0;
+    padding: 80px 20px 80px 20px;
 
     font-size: 0.9rem;
     line-height: 1.7rem;
 
     background-color: white;
     
-    box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);
-    /* border-top: 1px solid rgb(200, 200, 200); */
+    box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);    /* border-top: 1px solid rgb(200, 200, 200); */
     /* background-color: white; */
 }
 
@@ -86,6 +85,12 @@ footer a:hover {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
+    max-width: 275px;
+}
+
+.footer-table > li {
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
 }
 
 .logo {
