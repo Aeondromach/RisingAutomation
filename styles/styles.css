@@ -33,7 +33,7 @@ header {
     padding: 10px 30px 10px 30px;
 
     box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgb(200, 200, 200);
+    /* border-bottom: 1px solid rgb(200, 200, 200); */
 }
 
 footer {
@@ -44,6 +44,8 @@ footer {
 
     background-color: white;
     
+    box-shadow: 3px 3px 10px 10px rgb(0, 0, 0, 0.05);
+    /* border-top: 1px solid rgb(200, 200, 200); */
     /* background-color: white; */
 }
 
@@ -147,8 +149,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .button {
     background-color: var(--primary-background);
-    color: black;
-    border: 1px solid black;
+    color: var(--primary-text);
+    border: 1px solid var(--primary-text);
 
     font-family: circular;
     text-decoration: none;
@@ -272,13 +274,15 @@ main > div:not(.hero-banner):not(.no-margin) {
     max-width: 600px;
 }
 
-.sourcesList li {
+.sources-list li {
     padding-left: 20px;
     text-indent: -20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.sourcesMain {
-    width: 1000px;
+.sources-main {
+    max-width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
