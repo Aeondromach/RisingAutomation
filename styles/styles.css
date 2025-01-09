@@ -169,8 +169,15 @@ main > div:not(.hero-banner):not(.no-margin) {
     text-decoration: none;
     font-size: 0.9rem;
 
-    border-radius: 100px;
-    padding: 16px 24px 16px 24px;
+    /* border-radius: 100px; */
+    border-radius: 3px;
+    padding: 16px 32px 16px 32px;
+}
+
+.hero-image-buttons > .button:last-child {
+    background-color: var(--primary-text);
+    color: var(--primary-background);
+    border-color: var(--primary-text);
 }
 
 .button:hover {
@@ -191,18 +198,25 @@ main > div:not(.hero-banner):not(.no-margin) {
     width: 100%;
     height: 100%;
     scale: 1;
+
     object-fit: cover;
-    object-position: 0 40%;
+    object-position: 0 10%;
 
     filter: blur(2px) brightness(90%);
+    transform: scaleX(-1);
 }
 
 .hero-image-text {
     position: absolute;
-    top: 0;
+    top: 15%;
+    left: 15%;
 
     width: 100%;
     height: 100%;
+
+    /* max-width: 200px; */
+
+    padding: 20px;
 
     line-height: 2.75rem;
 
@@ -212,9 +226,9 @@ main > div:not(.hero-banner):not(.no-margin) {
     display: flex;
     flex-direction: column;
 
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
+    /* justify-content: center; */
+    align-items: flex-start;
 }
 
 .hero-image-text > h2 {
@@ -236,12 +250,6 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .hero-image-buttons > .button:not(.hero-image-buttons > .button:last-child) {
     margin-right: 15px
-}
-
-.hero-image-buttons > .button:last-child {
-    background-color: var(--primary-text);
-    color: var(--primary-background);
-    border-color: var(--primary-text);
 }
 
 .card-graphics {
