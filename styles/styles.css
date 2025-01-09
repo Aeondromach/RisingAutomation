@@ -224,3 +224,14 @@ main > div:not(.hero-image):not(.no-margin) {
     margin-bottom: 30px;
     max-width: 600px;
 }
+
+.sourcesList li {
+    padding-left: 20px;
+    text-indent: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sourcesMain {
+    width: 1000px;
+}
