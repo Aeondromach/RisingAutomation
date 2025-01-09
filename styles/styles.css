@@ -100,6 +100,11 @@ footer a:hover {
     filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
 nav {
     display: flex;
     flex-direction: row;
