@@ -16,7 +16,7 @@ body {
     font-size: 1.1rem;
     line-height: 2rem;
     background-color: #F9FCFF;
-    color: rgb(49, 72, 107);
+    color: #31486b;
 }
 
 header {
@@ -227,7 +227,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .card-image {
-    height: 100px;
+    height: 50px;
+    filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
 .card-title {
