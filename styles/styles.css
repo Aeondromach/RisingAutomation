@@ -16,7 +16,7 @@ body {
     --primary-background: #F9FCFF;
     --primary-text: #31486b;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 2rem;
     background-color: var(--primary-background);
     color: var(--primary-text);
@@ -40,7 +40,7 @@ footer {
     margin-top: 40px;
     padding: 60px 0 80px 0;
 
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.7rem;
 
     
@@ -73,7 +73,7 @@ footer a:hover {
 
 .footer-content > div > h2 {
     font-weight: bold;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .footer-content > div > *:not(h2) {
@@ -93,6 +93,8 @@ footer a:hover {
 nav {
     display: flex;
     flex-direction: row;
+
+    font-size: 1rem;
 
     width: 100%;
 }
@@ -150,7 +152,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 
     font-family: circular;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     border-radius: 100px;
     padding: 16px 24px 16px 24px;
@@ -196,14 +198,14 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .hero-image-text > h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 .hero-image-text > p {
     max-width: 400px;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .hero-image-buttons {
