@@ -13,6 +13,8 @@ body {
     /* font-family: "Poppins"; */
     /* font-family: circular-light; */
 
+    overflow-x: hidden;
+
     --primary-background: #F9FCFF;
     --primary-text: #31486b;
 
