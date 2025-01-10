@@ -148,9 +148,12 @@ nav > ul {
 nav > ul > li > a {
     color: inherit;
     text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.34s ease;
 }
 
 nav > ul > li > a:hover {
+    opacity: 1;
     text-decoration: underline;
 }
 
