@@ -233,6 +233,9 @@ main > div:not(.hero-banner):not(.no-margin) {
     object-position: 0 0;
 
     filter: brightness(70%);
+}
+
+.hero-image.reflected {
     transform: scaleX(-1);
 }
 
