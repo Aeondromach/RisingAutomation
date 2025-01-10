@@ -333,6 +333,37 @@ main > div:not(.hero-banner):not(.no-margin) {
     max-width: 600px;
 }
 
+.timeline-container {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 20px;
+}
+
+.vertical-timeline {
+    position: relative;
+    margin-left: 10px;
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-point {
+    position: absolute;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-text);
+    color: var(--primary-background);
+
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
 .call-to-action {
     display: flex;
     flex-direction: column;
@@ -366,6 +397,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .sources-main {
+    padding: 0 20px 0 20px;
+    
     max-width: 920px;
     margin-top: 20px;
     margin-bottom: 40px;
