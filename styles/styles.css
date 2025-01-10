@@ -220,6 +220,10 @@ main > div:not(.hero-banner):not(.no-margin) {
     height: calc(90vh - 50px);
 }
 
+.hero-banner.small {
+    height: calc(60vh - 50px);
+}
+
 .hero-image {
     width: 100%;
     height: 100%;
@@ -286,6 +290,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .card {
     padding: 15px;
+
+    width: 100%;
 }
 
 .card-image {
