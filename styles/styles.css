@@ -38,6 +38,7 @@ header {
     font-family: circular;
     font-size: 1.1rem;
 
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
 
     padding: 10px 30px 10px 30px;
 
@@ -148,7 +149,7 @@ nav > ul {
 nav > ul > li > a {
     color: inherit;
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.95;
     transition: opacity 0.34s ease;
 }
 
