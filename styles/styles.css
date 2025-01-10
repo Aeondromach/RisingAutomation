@@ -312,6 +312,23 @@ main > div:not(.hero-banner):not(.no-margin) {
     font-weight: 300;
 }
 
+.image-section {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 20px;
+    padding: 10px;
+}
+
+.image-section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.image-section > div {
+    width: 100%;
+    max-width: 600px;
+}
+
 .call-to-action {
     display: flex;
     flex-direction: column;
