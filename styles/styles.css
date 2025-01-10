@@ -38,8 +38,6 @@ header {
     font-family: circular;
     font-size: 1.1rem;
 
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
-
     padding: 10px 30px 10px 30px;
 
     /* border-bottom: 1px solid rgb(200, 200, 200); */
@@ -49,6 +47,7 @@ header.overlay {
     position: absolute;   
     z-index: 10;
     color: white;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0));
 }
 
 header:not(.overlay) {
