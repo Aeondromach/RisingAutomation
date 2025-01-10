@@ -16,7 +16,7 @@ body {
     --primary-background: #F9FCFF;
     --primary-text: #31486b;
 
-    --primary-background-dark: hsl(216, 100%, 99%);
+    --primary-background-dark: #ebebeb;
 
     font-size: 1rem;
     line-height: 2rem;
@@ -192,9 +192,13 @@ main > div:not(.hero-banner):not(.no-margin) {
     text-decoration: none;
     font-size: 0.9rem;
 
+    filter: brightness(1);
+
     /* border-radius: 100px; */
     border-radius: 3px;
     padding: 16px 32px 16px 32px;
+
+    transition: filter 100ms;
 }
 
 .hero-image-buttons > .button:last-child {
@@ -204,7 +208,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .button:hover {
-    background-color: var(--primary-background-dark);
+    filter: brightness(93%);
 }
 
 .hero-banner {
