@@ -28,6 +28,8 @@ header {
     width: 100vw;
     box-sizing: border-box;
 
+    overflow: hidden;
+
     top: 0;
     left: 0;
 
@@ -232,7 +234,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     object-fit: cover;
     object-position: 0 0;
 
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 .hero-image.reflected {
