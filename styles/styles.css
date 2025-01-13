@@ -346,6 +346,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .image-section > figure > img {
     object-fit: cover;
+    width: 425px;
 }
 
 .timeline-container {
