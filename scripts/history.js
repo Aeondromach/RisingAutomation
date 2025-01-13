@@ -1,4 +1,22 @@
-const timelineHeight = 40;
+const timelinePointHeight = 40;
+// let observer = null;
+
+// helper function that calls a callback when an element enters the viewport
+const timelinePointVisible = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const children = entry.target.parentElement.children;
+
+            // apply visible to all above timeline elements as well
+            for (let i = 0; i < children.length; i++) {
+                children[i].classList.add("visible");
+                if (children[i] === entry.target) {
+                    break;
+                }
+            }
+        }
+    });
+}
 
 const resizeTimeline = () => {
     const timeline = document.getElementsByClassName("vertical-timeline")[0];
@@ -10,6 +28,7 @@ const resizeTimeline = () => {
     }
 
     let workingOffset = 0;
+    let lastChild = {div: null, child: null};
 
     for (let i = 0; i < content.children.length; i++) {
         const child = content.children[i];
@@ -21,13 +40,18 @@ const resizeTimeline = () => {
         const div = document.createElement("div");
         div.classList.add("timeline-point");
 
-        div.style.top = (workingOffset - (timelineHeight)) + "px";
+        if (lastChild.child != null) lastChild.div.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight) + "px");
+        div.style.top = (workingOffset) + "px";
+
+        // create observer
+        observer = new IntersectionObserver(timelinePointVisible, {root: null, threshold: 1});
+        observer.observe(div);
 
         timeline.appendChild(div);
 
         workingOffset += halfHeight;
+        lastChild = {div: div, child: child};
     }
-
 }
 
 window.addEventListener('load', resizeTimeline);

@@ -321,7 +321,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     flex-direction: row;
     
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .image-section:nth-child(odd) {
@@ -333,35 +333,109 @@ main > div:not(.hero-banner):not(.no-margin) {
     max-width: 600px;
 }
 
+.image-section > figure {   
+
+}
+
+.image-section > figure > img {
+    object-fit: cover;
+
+
+    /* width: 500px;
+    height: 500px; */
+}
+
 .timeline-container {
     display: flex;
     flex-direction: row;
     
-    gap: 20px;
+    gap: 40px;
 }
 
 .vertical-timeline {
     position: relative;
-    margin-left: 10px;
+    margin-left: 30px;
     width: 50px;
 
     display: flex;
     flex-direction: column;
 }
 
+@property --timeline-point-conic {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
 .timeline-point {
     position: absolute;
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+    /* background-color: var(--primary-background);
+    border: 5px solid var(--primary-text); */
+    /* background-color: var(--primary-text); */
 
-    background-color: var(--primary-text);
-    color: var(--primary-background);
+    z-index: 10;
+
+    box-sizing: border-box;
+
+    transform: translateY(-50%);
 
     width: 40px;
     height: 40px;
     border-radius: 100%;
+
+    background-image: conic-gradient(var(--primary-text) var(--timeline-point-conic), transparent, transparent var(--timeline-point-conic));
+
+    transition: --timeline-point-conic ease 800ms;
+    transition-delay: 100ms;
+}
+
+.timeline-point.visible {
+    --timeline-point-conic: 100%;
+}
+
+.timeline-point::before {
+    position: absolute;
+    content: "";
+
+    background-color: var(--primary-background);
+
+    width: 29px;
+    height: 29px;
+
+    border-radius: 100%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .timeline-point.visible {
+    opacity: 1;
+} */
+
+.timeline-point::after {
+    content: "";
+    position: absolute;
+
+    z-index: 9;
+
+    top: 100%;
+    left: 50%;
+    width: 2px;
+
+    transform: translateX(-50%);
+
+    /* height: var(--timeline-height); */
+    height: 0px;
+    background-color: var(--primary-text);
+
+    transition: height 1s;
+    transition-delay: 100ms;
+}
+
+.timeline-point.visible::after {
+    height: var(--timeline-height);
 }
 
 .call-to-action {
@@ -398,7 +472,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .sources-main {
     padding: 0 20px 0 20px;
-    
+
     max-width: 920px;
     margin-top: 20px;
     margin-bottom: 40px;
