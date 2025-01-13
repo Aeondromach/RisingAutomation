@@ -7,7 +7,7 @@ const timelinePointVisible = (entries, observer) => {
         if (entry.isIntersecting) {
             const children = entry.target.parentElement.children;
 
-            // apply visible to all above timeline elements as well
+            // apply visible class to all above timeline elements as well as the current
             for (let i = 0; i < children.length; i++) {
                 children[i].classList.add("visible");
                 if (children[i] === entry.target) {
@@ -27,9 +27,11 @@ const resizeTimeline = () => {
         timeline.removeChild(timeline.firstChild);
     }
 
+    // current offset and last child
     let workingOffset = 0;
     let lastChild = {div: null, child: null};
 
+    // go through each child in the content container
     for (let i = 0; i < content.children.length; i++) {
         const child = content.children[i];
         const halfHeight = child.clientHeight / 2
@@ -40,10 +42,11 @@ const resizeTimeline = () => {
         const div = document.createElement("div");
         div.classList.add("timeline-point");
 
+        // set the height of the line between timeline points
         if (lastChild.child != null) lastChild.div.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight - timelinePointHeight/2) + "px");
         div.style.top = (workingOffset) + "px";
 
-        // create observer
+        // observe viewport intersection with the timeline point
         observer = new IntersectionObserver(timelinePointVisible, {root: null, threshold: 1});
         observer.observe(div);
 
@@ -54,5 +57,6 @@ const resizeTimeline = () => {
     }
 }
 
+// resize the timeline on load and when the window is resized
 window.addEventListener('load', resizeTimeline);
 window.addEventListener('resize', resizeTimeline);
