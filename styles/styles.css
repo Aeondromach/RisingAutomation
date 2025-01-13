@@ -31,6 +31,10 @@ body {
     color: var(--primary-text);
 }
 
+p, table {
+    line-height: 1.5rem;
+}
+
 header {
     width: 100vw;
     box-sizing: border-box;
@@ -573,4 +577,39 @@ main > div:not(.hero-banner):not(.no-margin) {
     max-width: 920px;
     margin-top: 20px;
     margin-bottom: 40px;
+}
+
+.impact-page {
+    max-width: 920px;
+    
+    margin: auto;
+    margin-top: 40px;
+}
+
+.impact-page > h1 {   
+    font-family: circular;
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+.impact-page .comparisons-table {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.impact-page .comparisons-body > tr {
+    
+}
+
+.impact-page .comparisons-body > tr > td:nth-child(2)::before {
+    display: block;
+    content: "Negative";
+    font-weight: bold;
+}
+
+.impact-page .comparisons-body > tr > td:nth-child(3)::before {
+    display: block;
+    content: "Positive";
+    font-weight: bold;
 }
