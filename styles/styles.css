@@ -373,6 +373,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 .image-section > figure > img {
     object-fit: cover;
     width: 425px;
+    height: 290px;
 }
 
 .timeline-container {
@@ -583,7 +584,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     max-width: 920px;
     
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .impact-page > h1 {   
@@ -598,8 +599,34 @@ main > div:not(.hero-banner):not(.no-margin) {
     margin-top: 40px;
 }
 
-.impact-page .comparisons-body > tr {
-    
+.impact-page .comparisons-body tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 100px;
+}
+
+.impact-page .comparisons-body tr:first-child {
+    margin-top: 0;
+}
+
+.impact-page .comparisons-body td {
+    padding: 20px 0 20px 0;
+}
+
+.impact-page .comparisons-body > tr > td:first-child {
+    font-weight: bold;
+    /* font-size: 1.2rem; */
+}
+
+.impact-page .comparisons-body img {
+    margin: auto;
+    margin-top: 20px;
+
+    display: block;
+    width: 80px;
+    filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
 .impact-page .comparisons-body > tr > td:nth-child(2)::before {
