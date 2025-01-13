@@ -1,5 +1,6 @@
 const timelinePointHeight = 40;
-// let observer = null;
+const timelineImages = ["assets/svg/car-svgrepo-com.svg", "assets/svg/bolt-svgrepo-com.svg", "assets/svg/battery-charge-svgrepo-com.svg"];
+// let observer = null
 
 // helper function that calls a callback when an element enters the viewport
 const timelinePointVisible = (entries, observer) => {
@@ -29,7 +30,7 @@ const resizeTimeline = () => {
 
     // current offset and last child
     let workingOffset = 0;
-    let lastChild = {div: null, child: null};
+    let lastChild = {point: null, child: null};
 
     // go through each child in the content container
     for (let i = 0; i < content.children.length; i++) {
@@ -39,21 +40,25 @@ const resizeTimeline = () => {
         workingOffset += halfHeight;
         
         // <div class="timeline-point"></div>
-        const div = document.createElement("div");
-        div.classList.add("timeline-point");
+        const timeline_point = document.createElement("div");
+        timeline_point.classList.add("timeline-point");
+
+        const image = document.createElement("img");
+        image.src = timelineImages[i % timelineImages.length];
+        timeline_point.appendChild(image);
 
         // set the height of the line between timeline points
-        if (lastChild.child != null) lastChild.div.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight - timelinePointHeight/2) + "px");
-        div.style.top = (workingOffset) + "px";
+        if (lastChild.child != null) lastChild.point.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight - timelinePointHeight/2) + "px");
+        timeline_point.style.top = (workingOffset) + "px";
 
         // observe viewport intersection with the timeline point
         observer = new IntersectionObserver(timelinePointVisible, {root: null, threshold: 1});
-        observer.observe(div);
+        observer.observe(timeline_point);
 
-        timeline.appendChild(div);
+        timeline.appendChild(timeline_point);
 
         workingOffset += halfHeight + 10;
-        lastChild = {div: div, child: child};
+        lastChild = {point: timeline_point, child: child};
     }
 }
 
