@@ -19,7 +19,7 @@ body {
     --primary-text: #31486b;
 
     --primary-background-dark: #ebeeef;
-    --primary-background-light: #f9fcff;
+    --primary-background-light: #e0e7f0;
 
     font-size: 1rem;
     line-height: 2rem;
@@ -424,7 +424,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     background-color: var(--primary-text);
 
     transition: height 1s;
-    transition-delay: 100ms;
+    transition-delay: 125ms;
 }
 
 .timeline-point.visible::after {
@@ -468,7 +468,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .tab-container .tab-button {
-    background-color: var(--primary-background-dark);
+    background-color: #e0e7f0;
     
     padding: 10px 25px 10px 25px;
     margin: 0;
@@ -502,7 +502,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .tab-container > .content-container {
     padding: 20px;
-    background-color: var(--primary-background-dark);
+    background-color: #e0e7f0;
 }
 
 .tab-container > .content-container > .content {
