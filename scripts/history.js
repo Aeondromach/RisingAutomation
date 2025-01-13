@@ -40,7 +40,7 @@ const resizeTimeline = () => {
         const div = document.createElement("div");
         div.classList.add("timeline-point");
 
-        if (lastChild.child != null) lastChild.div.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight) + "px");
+        if (lastChild.child != null) lastChild.div.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight - timelinePointHeight/2) + "px");
         div.style.top = (workingOffset) + "px";
 
         // create observer
