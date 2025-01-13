@@ -317,6 +317,12 @@ main > div:not(.hero-banner):not(.no-margin) {
     font-weight: 300;
 }
 
+.image-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .image-section {
     display: flex;
     flex-direction: row;

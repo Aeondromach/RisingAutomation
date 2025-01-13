@@ -49,7 +49,7 @@ const resizeTimeline = () => {
 
         timeline.appendChild(div);
 
-        workingOffset += halfHeight;
+        workingOffset += halfHeight + 10;
         lastChild = {div: div, child: child};
     }
 }
