@@ -43,9 +43,11 @@ const resizeTimeline = () => {
         const timeline_point = document.createElement("div");
         timeline_point.classList.add("timeline-point");
 
-        const image = document.createElement("img");
-        image.src = timelineImages[i % timelineImages.length];
-        timeline_point.appendChild(image);
+        if (i < timelineImages.length) {
+            const image = document.createElement("img");
+            image.src = timelineImages[i % timelineImages.length];
+            timeline_point.appendChild(image);
+        }
 
         // set the height of the line between timeline points
         if (lastChild.child != null) lastChild.point.style.setProperty("--timeline-height", (lastChild.child.clientHeight/2 + halfHeight - timelinePointHeight/2) + "px");
