@@ -1,6 +1,4 @@
 const timelinePointHeight = 40;
-const timelineImages = ["assets/svg/car-svgrepo-com.svg", "assets/svg/bolt-svgrepo-com.svg", "assets/svg/battery-charge-svgrepo-com.svg"];
-// let observer = null
 
 // helper function that calls a callback when an element enters the viewport
 const timelinePointVisible = (entries, observer) => {
@@ -43,9 +41,9 @@ const resizeTimeline = () => {
         const timeline_point = document.createElement("div");
         timeline_point.classList.add("timeline-point");
 
-        if (i < timelineImages.length) {
+        if (child.getAttribute("data-timeline-image") != null) {
             const image = document.createElement("img");
-            image.src = timelineImages[i % timelineImages.length];
+            image.src = child.getAttribute("data-timeline-image");
             timeline_point.appendChild(image);
         }
 
