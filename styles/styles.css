@@ -300,11 +300,11 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .hero-image-text {
     position: absolute;
-    top: 20%;
+    bottom: 30%;
     left: 15%;
 
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 
     z-index: 10;
 
