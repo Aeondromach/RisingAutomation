@@ -32,7 +32,7 @@ for image_path in images:
     print(save_path)
     
     image = Image.open(image_path)
-    image = image.convert('RGB')
+    image = image.convert('RGBA')
     
     if RESIZE: image.thumbnail((1920, 1080), Image.LANCZOS)
 
