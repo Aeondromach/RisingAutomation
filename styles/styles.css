@@ -292,7 +292,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     opacity: 1;
 
     object-fit: cover;
-    object-position: 0 60%;
+    object-position: 0 0;
     transition: opacity 250ms;
 }
 
