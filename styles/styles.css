@@ -139,6 +139,20 @@ footer a:hover {
     filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
+.citation {
+    margin-left: 0.2rem;
+    vertical-align: super;
+    font-size: 0.7rem;
+}
+
+.citation::before {
+    content: "[";
+}
+
+.citation::after {
+    content: "]";
+}
+
 .logo-link {
     display: flex;
     align-items: center;
