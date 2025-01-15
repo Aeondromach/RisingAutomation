@@ -265,7 +265,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .hero-banner.small {
-    height: calc(60vh - 50px);
+    height: calc(70vh - 50px);
 }
 
 .hero-banner.overlay-gradient::after {
@@ -304,9 +304,6 @@ main > div:not(.hero-banner):not(.no-margin) {
     left: 15%;
 
     transform: translateY(-50%);
-
-    /* width: 100%;
-    height: 100%; */
 
     z-index: 10;
 
