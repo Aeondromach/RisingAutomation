@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 RESIZE = True
-REMOVE = False
+REMOVE = True
 IMAGE_EXTENSIONS_TO_COMPRESS = [".jpeg", ".jpg", ".png", ".webp"]
 
 directory = os.path.dirname(__file__)
@@ -20,20 +20,21 @@ for root, dirs, files in os.walk("."):
     path = root.split(os.sep)
     for file in files:
         if file_allowed(file):
-            images.append(file)
+            images.append(os.path.join(*path, file))
 
 print(images)
 # exit()
 
-for image in images:
-    save_path = "".join(image.split(".")[:-1]) + ".webp"
+for image_path in images:
+    save_path = "".join(image_path.split(".")[:-1]) + ".webp"
     
     print(save_path)
     
-    image = Image.open(image)
+    image = Image.open(image_path)
     image = image.convert('RGB')
     
     if RESIZE: image.thumbnail((1920, 1080), Image.LANCZOS)
-    if REMOVE: os.remove(image)
 
     image.save(save_path, 'webp', optimize = True, quality = 70)
+
+    if REMOVE: os.remove(image_path)
