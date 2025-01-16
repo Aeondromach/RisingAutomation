@@ -684,3 +684,58 @@ main > div:not(.hero-banner):not(.no-margin) {
     content: "Positive";
     font-weight: bold;
 }
+
+.comparison-table-container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+
+    padding: 40px 20px 40px 20px;
+}
+
+.comparison-table-container > div:first-of-type > h2 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.comparison-table-container > div:first-of-type > p {
+    margin-bottom: 30px;
+
+    max-width: 600px;
+}
+
+.comparison-table {
+    width: 100%;
+    text-align: left;
+}
+
+.comparison-table th {
+    font-weight: bold;
+}
+
+.comparison-table > tbody > tr {
+    border-top: 1px solid rgb(200, 200, 200);
+}
+
+.comparison-table > tbody > tr > td:first-of-type {
+    font-weight: bold;
+}
+
+.comparison-table td, .comparison-table th {
+    padding: 20px 0 20px 0;
+}
+
+.comparison-table > tbody > tr > td > img {
+    width: 20px;
+}
+
+.checkmark {
+    filter: invert(37%) sepia(91%) saturate(356%) hue-rotate(111deg) brightness(90%) contrast(91%);
+}
+
+.x-mark {
+    filter: invert(12%) sepia(39%) saturate(6023%) hue-rotate(348deg) brightness(97%) contrast(92%);
+}
