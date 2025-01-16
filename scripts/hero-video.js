@@ -38,9 +38,9 @@ var updateVideo = () => {
 // on time update listener
 const onTimeUpdate = (event) => {
     let video = altActive ? altHeroVideo : heroVideo;
-    
+
     // for some reason initially comes up as some value less than 1
-    if (video.duration < 1) return;
+    if (video.readyState != 4) return;
     
     // if we are within the last 2 seconds of the video, go to the next video
     if (video.currentTime > video.duration - 2) updateVideo();
