@@ -762,6 +762,10 @@ main > div:not(.hero-banner):not(.no-margin) {
     margin-bottom: 20px;
 }
 
+.solution-page .image-section > div {
+    margin-left: 40px;
+}
+
 .click-to-fullscreen {
     cursor: pointer;
 }
