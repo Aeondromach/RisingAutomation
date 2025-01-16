@@ -650,7 +650,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 .impact-page .comparisons-body tr {
     display: grid;
     grid-template-columns: 235px 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
 
     margin-top: 100px;
 }
@@ -701,7 +701,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 .comparison-table-container {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 60px;
 
     padding: 40px 20px 40px 20px;
 }
@@ -760,4 +760,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.click-to-fullscreen {
+    cursor: pointer;
 }
