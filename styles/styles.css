@@ -734,7 +734,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .comparison-table > tbody > tr > td:first-of-type {
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .comparison-table td, .comparison-table th {
@@ -742,6 +742,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .comparison-table > tbody > tr > td > img {
+    vertical-align: text-bottom;
     width: 20px;
 }
 
