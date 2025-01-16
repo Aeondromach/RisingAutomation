@@ -797,3 +797,29 @@ main > div:not(.hero-banner):not(.no-margin) {
 
     color: white;
 }
+
+.problems-page {
+
+}
+
+.problems-page .image-section-container {
+    padding: 40px 20px 40px 20px;
+}
+
+.problems-page .image-section {
+    height: 70vh;
+}
+
+.problems-page .image-section h2 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.problems-page .image-section p {
+    font-size: 20px;
+    /* font-familY: circular-light; */
+    font-familY: circular;
+}
