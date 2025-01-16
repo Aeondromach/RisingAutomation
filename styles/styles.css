@@ -733,9 +733,9 @@ main > div:not(.hero-banner):not(.no-margin) {
     border-top: 1px solid rgb(220, 220, 220);
 }
 
-.comparison-table > tbody > tr > td:first-of-type {
-    /* font-weight: bold; */
-}
+/* .comparison-table > tbody > tr > td:first-of-type {
+    font-weight: bold;
+} */
 
 .comparison-table td, .comparison-table th {
     padding: 20px 0 20px 0;
@@ -769,4 +769,31 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .click-to-fullscreen {
     cursor: pointer;
+}
+
+.image-cards {
+    display: flex;
+    column-gap: 20px;
+}
+
+.image-cards > figure {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-cards figcaption {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    color: white;
 }
