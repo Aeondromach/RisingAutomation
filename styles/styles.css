@@ -401,6 +401,10 @@ main > div:not(.hero-banner):not(.no-margin) {
     padding: 20px;
 }
 
+.image-section h2 {
+    font-weight: bold;
+}
+
 .image-section:nth-child(odd) {
     flex-direction: row-reverse;
 }
@@ -688,7 +692,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 .comparison-table-container {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 10x0px;
 
     padding: 40px 20px 40px 20px;
 }
