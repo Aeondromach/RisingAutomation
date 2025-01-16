@@ -39,7 +39,6 @@ var updateVideo = () => {
 const onTimeUpdate = (event) => {
     let video = altActive ? altHeroVideo : heroVideo;
 
-    // for some reason initially comes up as some value less than 1
     if (video.readyState != 4) return;
     
     // if we are within the last 2 seconds of the video, go to the next video

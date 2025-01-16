@@ -701,7 +701,7 @@ main > div:not(.hero-banner):not(.no-margin) {
 .comparison-table-container {
     display: flex;
     flex-direction: row;
-    gap: 10x0px;
+    gap: 50px;
 
     padding: 40px 20px 40px 20px;
 }
@@ -751,4 +751,13 @@ main > div:not(.hero-banner):not(.no-margin) {
 
 .x-mark {
     filter: invert(12%) sepia(39%) saturate(6023%) hue-rotate(348deg) brightness(97%) contrast(92%);
+}
+
+.solution-page .image-section h2 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
