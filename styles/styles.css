@@ -57,7 +57,9 @@ header {
 }
 
 sub {
-    vertical-align: sub;
+    /* vertical-align: sub; */
+    position: relative;
+    top: 0.3em;
     font-size: 0.8rem;
 }
 
