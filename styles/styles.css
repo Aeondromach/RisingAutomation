@@ -540,7 +540,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     
     text-align: center;
 
-    padding: 80px 0 80px 0;
+    padding: 100px 0 100px 0;
 }
 
 .call-to-action > h2 {
@@ -628,14 +628,18 @@ main > div:not(.hero-banner):not(.no-margin) {
     margin-bottom: 40px;
 }
 
-.impact-page, .problems-page {
+.impact-page {
     max-width: 1020px;
     
     margin: auto;
     margin-top: 60px;
 }
 
-.impact-page > h1, .problems-page > h1 {   
+.problems-page {
+    margin-top: 60px;   
+}
+
+.impact-page > h1, .problems-page > div > h1 {   
     font-family: circular;
     font-size: 2.5rem;
 
@@ -827,9 +831,22 @@ main > div:not(.hero-banner):not(.no-margin) {
     height: 70vh;
 } */
 
-.problems-page .image-section {
+.problems-page .image-section:nth-child(odd) > div {
+    padding-right: 10px;
     padding-left: 0;
+}
+
+.problems-page .image-section > div {
+    width: 100%;
+    max-width: unset;
+
+    padding-left: 10px;
     padding-right: 0;
+}
+
+.problems-page .image-section {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .problems-page .image-section h2 {
