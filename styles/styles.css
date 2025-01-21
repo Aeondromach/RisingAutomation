@@ -540,7 +540,7 @@ main > div:not(.hero-banner):not(.no-margin) {
     
     text-align: center;
 
-    padding: 80px 0 80px 0;
+    padding: 100px 0 100px 0;
 }
 
 .call-to-action > h2 {
@@ -635,19 +635,23 @@ main > div:not(.hero-banner):not(.no-margin) {
     margin-top: 60px;
 }
 
-.impact-page > h1 {   
+.problems-page {
+    margin-top: 60px;   
+}
+
+.impact-page > h1, .problems-page > div > h1 {   
     font-family: circular;
     font-size: 2.5rem;
 
     margin-bottom: 20px;
 }
 
-.impact-page .comparisons-table {
+.comparisons-table {
     width: 100%;
     margin-top: 40px;
 }
 
-.impact-page .comparisons-body tr {
+.comparisons-body tr {
     display: grid;
     grid-template-columns: 235px 1fr 1fr;
     gap: 40px;
@@ -655,29 +659,29 @@ main > div:not(.hero-banner):not(.no-margin) {
     margin-top: 100px;
 }
 
-.impact-page .comparisons-body tr > td:not(:first-of-type) {
+.comparisons-body tr > td:not(:first-of-type) {
     width: 100%;
 }
 
-.impact-page .comparisons-body td {
+.comparisons-body td {
     padding: 0 20px 0 20px;
 }
 
-.impact-page .comparisons-body tr:first-child {
+.comparisons-body tr:first-child {
     margin-top: 0;
 }
 
-.impact-page .comparisons-body td {
+.comparisons-body td {
     padding: 20px 0 20px 0;
 }
 
-.impact-page .comparisons-body > tr > td:first-child {
+.comparisons-body > tr > td:first-child {
     font-weight: bold;
     /* text-align: center; */
     /* font-size: 1.2rem; */
 }
 
-.impact-page .comparisons-body img {
+.comparisons-body img {
     margin: auto;
     margin-top: 20px;
 
@@ -686,13 +690,13 @@ main > div:not(.hero-banner):not(.no-margin) {
     filter: invert(25%) sepia(11%) saturate(2661%) hue-rotate(177deg) brightness(91%) contrast(84%);
 }
 
-.impact-page .comparisons-body > tr > td:nth-child(2)::before {
+.comparisons-body > tr > td:nth-child(2)::before {
     display: block;
     content: "Negative";
     font-weight: bold;
 }
 
-.impact-page .comparisons-body > tr > td:nth-child(3)::before {
+.comparisons-body > tr > td:nth-child(3)::before {
     display: block;
     content: "Positive";
     font-weight: bold;
@@ -774,6 +778,8 @@ main > div:not(.hero-banner):not(.no-margin) {
 .image-cards {
     display: flex;
     column-gap: 20px;
+
+    padding: 40px 0 40px 0;
 }
 
 .image-cards > figure {
@@ -783,6 +789,15 @@ main > div:not(.hero-banner):not(.no-margin) {
     position: relative;
 }
 
+.image-cards > figure > img {
+    transition: transform 0.5s;
+}
+
+.image-cards > figure:hover > img {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .image-cards img {
     width: 100%;
     height: 100%;
@@ -790,10 +805,59 @@ main > div:not(.hero-banner):not(.no-margin) {
 }
 
 .image-cards figcaption {
+    display: none;
+
     position: absolute;
 
     bottom: 0;
     left: 0;
 
     color: white;
+}
+
+.problems-page {
+
+}
+
+.problems-page .image-section-container {
+    padding: 40px 20px 40px 20px;
+}
+
+/* .problems-page .image-section img {
+    height: 100%;
+}
+
+.problems-page .image-section {
+    height: 70vh;
+} */
+
+.problems-page .image-section:nth-child(odd) > div {
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+.problems-page .image-section > div {
+    width: 100%;
+    max-width: unset;
+
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.problems-page .image-section {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.problems-page .image-section h2 {
+    /* font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-bottom: 20px; */
+}
+
+.problems-page .image-section p {
+    /* font-size: 16px;
+    font-family: "Poppins"; */
 }
